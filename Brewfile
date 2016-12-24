@@ -1,0 +1,26 @@
+cask_args appdir: '/Applications'
+tap 'argon/mas'
+tap 'caskroom/cask'
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+brew 'emacs', args: ['with-cocoa']
+brew 'cask'
+brew 'gauche'
+brew 'git'
+brew 'memcached'
+brew 'wget'
+brew 'argon/mas/mas'
+cask 'google-chrome'
+cask 'firefox', args: { appdir: '/Applications' }
+cask 'android-studio'
+cask 'intellij-idea'
+cask 'atom'
+cask 'virtualbox'
+cask 'genymotion'
+cask 'sourcetree'
+cask 'android-file-transfer'
+cask 'gimp'
+cask 'postman'
+cask 'chatwork'
+mas 'Xcode', id: 497799835
+
