@@ -1,0 +1,47 @@
+#-*- mode: Shell-script; -*-
+# VERSION 0.0.0
+
+MYNAME='CRZPC7065'
+
+source ~/.git-completion.bash
+
+function parse_git_branch {
+  git branch  2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+function proml {
+    PS1="\[\033[1;34m\][\u@$MYNAME:\[\033[0;32m\]\W\[\033[1;34m\]]\[\033[33m\]\$(parse_git_branch)\[\033[0m\]$ "
+}
+proml
+
+#
+# shorter names
+#
+alias ls='/bin/ls -GFw'
+alias sl='ls'
+alias ltr='ls -ltr'
+alias goProject='cd /crooz/venus3_space/venus/venus_3.0/project/crooz_ec/master'
+alias goResource='cd /crooz/venus3_space/venus/venus_3.0/resource/crooz_ec_resource'
+alias sshvenus='ssh root@localvenus'
+alias sshtrans03='ssh kharada@transPort03'
+alias p='sudo purge'
+alias shoplist_android='cd /Users/kharada/Work/Projects/shoplist_android'
+alias shoplist_ios='cd /Users/kharada/Work/Projects/shoplist_ios'
+alias gitlog='git log --graph --name-status --pretty=format:"%C(red)%h %C(green)%an %Creset%s %C(yellow)%d%Creset"'
+alias cdu='sudo du -d 1 -h'
+alias sshmini='ssh CRZPC7055'
+
+export BASHRC_DONE=1
+export PATH=/usr/local/share/npm/bin:/Users/kazumiharada/Library/Android/sdk/platform-tools:$PATH
+export NODE_PATH=/usr/local/lib/node_modules
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+
+eval "$(rbenv init -)"
+
+#
+# bashrc end.
+#
+
+
