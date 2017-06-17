@@ -22,5 +22,6 @@ cask 'android-file-transfer'
 cask 'gimp'
 cask 'postman'
 cask 'chatwork'
+cask 'sketch'
 mas 'Xcode', id: 497799835
 
