@@ -22,6 +22,6 @@ cask 'android-file-transfer'
 cask 'postman'
 cask 'chatwork'
 cask 'sketch'
-cask 'memumeters'
+cask 'menumeters'
 mas 'Xcode', id: 497799835
 
